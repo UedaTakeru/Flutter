@@ -1,6 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server");
 
-// Sample data
 const books = [
     {
         title: "Harry Potter and the Sorcerer's Stone",
@@ -12,7 +11,6 @@ const books = [
     }
 ];
 
-// どのようにしてAPIに問い合わせをするのか
 const typeDefs = gql`
     type Book {
         title: String
