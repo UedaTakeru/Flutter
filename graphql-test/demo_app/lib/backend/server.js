@@ -35,6 +35,6 @@ const server = new ApolloServer({
     resolvers
 });
 
-server.listen().then(({ url }) => {
+server.listen({ port: 4001 }).then(({ url }) => {
     console.log(`Server ready at ${url}`)
 });
