@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "graphql": "^16.8.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/flutter-freezed": "^4.0.0",
+    "typescript": "^5.4.5",
+    "@graphql-codegen/typescript": "4.0.6",
+    "@graphql-codegen/flow": "3.0.0",
+    "@graphql-codegen/typescript-document-nodes": "4.0.6"
+  },
+  "scripts": {
+    "codegen": "graphql-codegen --config codegen.ts"
+  }
+}
