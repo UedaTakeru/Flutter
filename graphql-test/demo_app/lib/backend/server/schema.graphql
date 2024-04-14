@@ -1,0 +1,34 @@
+type User {
+    id: ID!
+    email: String!
+    name: String
+    posts: [Post]
+    profile: Profile!
+}
+
+type Profile {
+    id: ID!
+    bio: String
+    userId: Int!
+}
+
+type Post {
+    id: ID!
+    title: String!
+    content: String
+    published: Boolean
+    authorId: Int!
+}
+
+type Query {
+    users(published: Boolean!): [User]
+}
+
+type Mutation {
+    createData(name: String!, email: String!, title: String!, content: String, bio: String): User
+    createPost(authorId: Int!, title: String!, content: String): Post
+    upsertPost(id: Int!, authorId: Int!, title: String!, content: String): Post
+    updatePost(id: Int!, content: String!, published: Boolean!): Post
+    deletePost(id: Int!): Post
+    updateProfile(id: Int!, bio: String!): Profile
+}
